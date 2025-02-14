@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        .activity-option:hover {
+            transform: scale(1.02);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-rose-50 to-pink-50 min-h-screen p-8">
+    <div class="max-w-2xl mx-auto">
+        <!-- Header with floating hearts -->
+        <div class="text-center mb-12 relative">
+            <div class="absolute left-0 top-0 float-animation" style="animation-delay: 0s;">
+                <i data-lucide="heart" class="w-6 h-6 text-rose-300"></i>
+            </div>
+            <div class="absolute right-0 top-0 float-animation" style="animation-delay: 0.5s;">
+                <i data-lucide="heart" class="w-6 h-6 text-rose-300"></i>
+            </div>
+            <h1 class="text-4xl font-serif text-rose-900 mb-4">Would You Be My Valentine?</h1>
+            <p class="text-lg text-rose-700 italic">"Every great story starts with a simple hello..."</p>
+        </div>
+
+        <form action="<form action="https://formspree.io/f/xpwqjvbr" method="POST"" method="POST" class="bg-white rounded-2xl shadow-lg p-8 border border-rose-100">
+            <div class="mb-8 text-center">
+                <p class="text-xl text-gray-700 font-serif">
+                    Hi! I'd love to spend Valentine's Day getting to know someone as wonderful as you. 
+                    Would you join me for one of these special activities?
+                </p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <div class="activity-option border border-rose-100 rounded-xl p-6 hover:bg-rose-50 cursor-pointer">
+                    <label class="flex items-center space-x-4">
+                        <input type="radio" name="activity" value="coffee" class="form-radio text-rose-600 w-5 h-5" required>
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="coffee" class="w-5 h-5 text-rose-600"></i>
+                                <span class="text-lg font-medium text-gray-800">Coffee & Conversation</span>
+                            </div>
+                            <p class="text-gray-600 mt-1">A cozy café chat with amazing pastries and warm drinks</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="activity-option border border-rose-100 rounded-xl p-6 hover:bg-rose-50 cursor-pointer">
+                    <label class="flex items-center space-x-4">
+                        <input type="radio" name="activity" value="dinner" class="form-radio text-rose-600 w-5 h-5">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="utensils" class="w-5 h-5 text-rose-600"></i>
+                                <span class="text-lg font-medium text-gray-800">Dinner Adventure</span>
+                            </div>
+                            <p class="text-gray-600 mt-1">Exploring flavors together at a charming fusion restaurant</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="activity-option border border-rose-100 rounded-xl p-6 hover:bg-rose-50 cursor-pointer">
+                    <label class="flex items-center space-x-4">
+                        <input type="radio" name="activity" value="art" class="form-radio text-rose-600 w-5 h-5">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="palette" class="w-5 h-5 text-rose-600"></i>
+                                <span class="text-lg font-medium text-gray-800">Art Gallery Visit</span>
+                            </div>
+                            <p class="text-gray-600 mt-1">Discovering art together and sharing perspectives</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="activity-option border border-rose-100 rounded-xl p-6 hover:bg-rose-50 cursor-pointer">
+                    <label class="flex items-center space-x-4">
+                        <input type="radio" name="activity" value="movie" class="form-radio text-rose-600 w-5 h-5">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="film" class="w-5 h-5 text-rose-600"></i>
+                                <span class="text-lg font-medium text-gray-800">Movie & Dessert</span>
+                            </div>
+                            <p class="text-gray-600 mt-1">A fun movie followed by sweet treats and conversation</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="activity-option border border-rose-100 rounded-xl p-6 hover:bg-rose-50 cursor-pointer">
+                    <label class="flex items-center space-x-4">
+                        <input type="radio" name="activity" value="music" class="form-radio text-rose-600 w-5 h-5">
+                        <div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="music" class="w-5 h-5 text-rose-600"></i>
+                                <span class="text-lg font-medium text-gray-800">Live Music Evening</span>
+                            </div>
+                            <p class="text-gray-600 mt-1">Enjoying jazz tunes with light bites and good company</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <label class="block text-gray-700 mb-2 font-medium">Any thoughts you'd like to share?</label>
+                <textarea 
+                    name="message" 
+                    class="w-full p-4 border border-rose-100 rounded-xl focus:ring-2 focus:ring-rose-200 focus:border-rose-300 outline-none" 
+                    rows="3"
+                    placeholder="I'd love to hear what you're thinking..."
+                ></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-rose-600 text-white px-10 py-3 rounded-full hover:bg-rose-700 transition-colors transform hover:scale-105 duration-200 shadow-md">
+                    Send My Response ✨
+                </button>
+            </div>
+        </form>
+
+        <!-- Footer with floating hearts -->
+        <div class="text-center mt-8 text-gray-600 relative">
+            <div class="absolute left-1/4 bottom-0 float-animation" style="animation-delay: 1s;">
+                <i data-lucide="heart" class="w-4 h-4 text-rose-300"></i>
+            </div>
+            <div class="absolute right-1/4 bottom-0 float-animation" style="animation-delay: 1.5s;">
+                <i data-lucide="heart" class="w-4 h-4 text-rose-300"></i>
+            </div>
+            <p>Looking forward to your response 💝</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Add click handler for activity options
+        document.querySelectorAll('.activity-option').forEach(option => {
+            option.addEventListener('click', () => {
+                option.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+    </script>
+</body>
+</html>
